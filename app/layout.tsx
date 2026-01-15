@@ -1,34 +1,52 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// Use Inter font - a clean, modern sans-serif
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-geist-sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: "NMODM",
-  description: "a strategy game",
-};
+  title: 'NMODM - Strategic Number Game',
+  description: 'A turn-based strategy game of numbers and foresight. Challenge your mind with pure skill-based gameplay.',
+  keywords: ['game', 'strategy', 'puzzle', 'numbers', 'two-player', 'offline'],
+  authors: [{ name: 'NMODM Team' }],
+  openGraph: {
+    title: 'NMODM - Strategic Number Game',
+    description: 'A turn-based strategy game of numbers and foresight.',
+    type: 'website',
+    images: ['/og-image.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NMODM - Strategic Number Game',
+    description: 'A turn-based strategy game of numbers and foresight.',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} antialiased`}>
         {children}
       </body>
     </html>
-  );
+  )
 }
