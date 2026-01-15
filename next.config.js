@@ -9,9 +9,12 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
   },
   
+  // Performance optimizations
+  swcMinify: true,
+  
   // Experimental features for better performance
   experimental: {
-    optimizeCss: true,
+    // Removed optimizeCss - causing build issues
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
 }
