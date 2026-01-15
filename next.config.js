@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   // Enable strict mode for better development experience
   reactStrictMode: true,
   
