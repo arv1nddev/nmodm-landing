@@ -22,10 +22,10 @@ export default function DownloadSection() {
       description: 'Download APK or get it from Play Store',
       available: true,
       comingSoon: false,
-      downloadUrl: 'https://drive.google.com/uc?export=download&id=1IxAXysktEOj275-rJj_7iGh5zfK-qs2_', 
+      downloadUrl: 'https://drive.google.com/uc?export=download&id=1DzKvB_9G06ZGS6Jz5zfsxWo8Sio_vNYy', 
       bgGradient: 'from-green-500/10 to-emerald-500/10',
       iconColor: 'text-green-400',
-      size : 45
+      size : 45.4
     },
     {
       name: 'iOS',
@@ -44,10 +44,10 @@ export default function DownloadSection() {
       description: 'Download installer for Windows PC',
       available: true,
       comingSoon: false,
-      downloadUrl: 'https://drive.google.com/uc?export=download&id=1qEL50h9aIjyibnH-5SwJEl3hSkK586X5',
+      downloadUrl: 'https://drive.google.com/uc?export=download&id=1WDfdUgKC-HTkmGs-H1dAcjnvJH65fAUC',
       bgGradient: 'from-blue-500/10 to-cyan-500/10',
       iconColor: 'text-blue-400',
-      size : 10
+      size : 10.9
     },
   ]
   
@@ -107,7 +107,7 @@ export default function DownloadSection() {
                     transition={{ delay: 0.5 }}
                     className="mt-4 text-xs text-gray-500 text-center"
                   >
-                    Version 1.0.0 • {platform.size} MB
+                    Version 1.2.0 • {platform.size} MB
                   </motion.div>
                 )}
               </div>
